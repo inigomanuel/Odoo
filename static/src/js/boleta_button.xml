@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <templates id="template" xml:space="preserve">
+        <t t-name="BoletaButton" owl="1">
+            <button class="button button-boleta" t-on-click="onClick">
+                Boleta
+            </button>
+        </t>
+    </templates>
+</odoo>

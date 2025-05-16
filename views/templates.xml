@@ -1,0 +1,44 @@
+<odoo>
+    <data>
+<!--Paso inicial-->
+      <record id ="esclavo_tree_view" model ="ir.ui.view">
+        <field name="name">subordinado.tree.view</field>
+        <field name="model">prueba.subordinados</field>
+        <field name="arch" type="xml">
+          <tree>
+            <field name="name"/> 
+            <field name="age"/>
+          </tree>
+        </field>
+      </record>
+
+<!--Paso formulario-->
+      <record id ="student_form_view" model="ir.ui.view">
+        <field name="name">subordinado_form_view</field>
+        <field name="model">prueba.subordinados</field>
+        <field name="arch" type="xml">
+        <form>
+          <sheet>
+            <group>
+              <field name="name"/>
+            </group>
+            <group>
+              <field name="age"/>
+            </group>
+          </sheet>
+        </form>
+        </field>
+      </record>
+
+<!--Paso pestanas-->
+      <record id ="esclavo_action" model="ir.actions.act_window">
+        <field name="name">Subordinado</field>
+        <field name="res_model">prueba.subordinados</field>
+        <field name="view_mode">tree,form</field>
+      </record>
+
+      <menuitem id="menu_root" name="Algodon"/>
+      <menuitem id="menu_esclavos" name="Esclavos" parent="menu_root"/>
+      <menuitem id="menu_esclavos_list" name="listita" parent="menu_esclavos" action="esclavo_action"/>
+    </data>
+</odoo>
